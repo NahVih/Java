@@ -1,0 +1,10 @@
+public class Account {
+	double balance;
+	int branch;
+	int number;
+	String customerName;
+	
+	public void transfer(double value) {
+		balance = balance + value;
+	}
+}
