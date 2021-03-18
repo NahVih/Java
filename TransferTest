@@ -4,7 +4,21 @@ public class TransferTest {
 		Account accountPaulo = new Account();
 		accountPaulo.balance = 100;
 		System.out.println(accountPaulo.balance);
-		accountPaulo.transfer(50);
+		accountPaulo.deposit(50);
 		System.out.println(accountPaulo.balance);
+		accountPaulo.withdraw(20);
+		System.out.println(accountPaulo.balance);
+		
+		Account accountMarcela = new Account();
+		accountMarcela.balance = 200;
+		System.out.println("The balance is " + accountMarcela.balance);
+		if(accountMarcela.transfer(300, accountPaulo)) {
+			System.out.println("The trasnfer was a success.");
+		} System.out.println("The trasnfer was NOT a success.");
+		;
+		System.out.println(accountPaulo.balance);
+		System.out.println("The balance is " + accountMarcela.balance);
+		
+		
 	}
 }
