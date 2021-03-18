@@ -4,7 +4,26 @@ public class Account {
 	int number;
 	String customerName;
 	
-	public void transfer(double value) {
-		balance = balance + value;
+	public void deposit (double value) {
+		balance += value;
+	}
+	
+	public boolean withdraw(double value) {
+		if(this.balance >= value) {
+			this.balance -= value;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public boolean transfer(double value, Account destiny) {
+		if(this.balance >= value) {
+			this.withdraw(value);
+			destiny.deposit(value);
+			return true;
+		}
+		return false;
 	}
 }
