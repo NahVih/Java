@@ -1,0 +1,10 @@
+public class TransferTest {
+
+	public static void main(String[] args) {
+		Account accountPaulo = new Account();
+		accountPaulo.balance = 100;
+		System.out.println(accountPaulo.balance);
+		accountPaulo.transfer(50);
+		System.out.println(accountPaulo.balance);
+	}
+}
