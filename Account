@@ -1,8 +1,8 @@
 public class Account {
-	double balance;
+	private double balance;
 	int branch;
 	int number;
-	String customerName;
+	Client customerName;
 	
 	public void deposit (double value) {
 		balance += value;
@@ -25,5 +25,9 @@ public class Account {
 			return true;
 		}
 		return false;
+	}
+	
+	public double getBalance() {
+		return this.balance;
 	}
 }
