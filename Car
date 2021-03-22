@@ -1,0 +1,55 @@
+
+public class Car{
+	private int year;
+	private String model;
+	private double price;
+	
+		public Car(int year, String model, double price){
+			if(year >= 1891) {
+				this.year = year;	
+			} else {
+				System.out.println("This is a new model car");
+				this.year = 2021;
+			}
+			if(model != null) {
+				this.model = model;
+			} else {
+				System.out.println("Model was not provided");
+				this.model = "Model was not provided";
+			}
+			if(price > 0 ) {
+				this.price = price;
+			} else {
+				System.out.println("Price was not provided");
+				this.price = 0;
+			}
+		}
+		
+		public int getYear() {
+			return year;
+		}
+
+		public void setYear(int year) {
+			this.year = year;
+		}
+
+		public String getModel() {
+			return model;
+		}
+
+		public void setModel(String model) {
+			this.model = model;
+		}
+
+		public double getPrice() {
+			return price;
+		}
+
+		public void setPrice(double price) {
+			this.price = price;
+		}
+
+		public Car(String model, double price) {
+			this(2021, model, price);
+		}
+}
