@@ -1,20 +1,20 @@
 
 public class TestClient {
 	public static void main(String[] args) {
-		Account accountMarcela = new Account();
+		Account accountMarcela = new Account(1247, 157986);
 		Client clientMarcela = new Client();
-		clientMarcela.name = "Marcela";
+		clientMarcela.setName("Marcela");
 		
-		accountMarcela.customerName = clientMarcela;
+		accountMarcela.setCustomerName(clientMarcela);
 		
-		System.out.println(accountMarcela.customerName);
-		System.out.println(clientMarcela.name);
-		System.out.println(accountMarcela.customerName.name);
+		System.out.println(accountMarcela.getCustomerName());
+		System.out.println(clientMarcela.getName());
+		System.out.println(accountMarcela.getCustomerName().getName());
 		
-		Account accountPaulo = new Account();
-		accountPaulo.customerName = new Client();
-		accountPaulo.customerName.name = "Paulo";
-		System.out.println(accountPaulo.customerName.name);
+		Account accountPaulo = new Account(1475, 698534);
+		accountPaulo.setCustomerName(new Client());
+		accountPaulo.getCustomerName().setName("Paulo");
+		System.out.println(accountPaulo.getCustomerName().getName());
 
 	}
 
