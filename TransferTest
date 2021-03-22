@@ -1,11 +1,11 @@
 public class TransferTest {
 
 	public static void main(String[] args) {
-		Account accountPaulo = new Account();
+		Account accountPaulo = new Account(1262, 285796);
 		accountPaulo.deposit(50);
 		accountPaulo.withdraw(20);
 		
-		Account accountMarcela = new Account();
+		Account accountMarcela = new Account(3047, 758465);
 		System.out.println("The balance is " + accountMarcela.getBalance());
 		if(accountMarcela.transfer(300, accountPaulo)) {
 			System.out.println("The trasnfer was a success.");
