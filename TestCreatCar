@@ -1,0 +1,9 @@
+public class TestCreatCar {
+	public static void main(String[] args) {
+		Car Mazda = new Car(2013, "Mazda", 15500.0);
+		System.out.println(Mazda.getYear() +" "+ Mazda.getModel()+" R$"+ Mazda.getPrice());
+		
+		Car Honda = new Car("Honda", 12500.0);
+		System.out.println(Honda.getYear() +" "+ Honda.getModel()+" R$"+ Honda.getPrice());
+	}
+}
