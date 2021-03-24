@@ -1,0 +1,18 @@
+
+public class PremiumAccount extends Account {
+	public PremiumAccount(int branch, int number) {
+		super(branch, number);
+	}
+	
+	@Override
+	public boolean withdraw(double value) {
+		if(super.getBalance()>= value) {
+			value += 0.2;
+			System.out.println(value);
+			return super.withdraw(value);
+		}
+		else {
+			return false;
+		}
+	}
+}
